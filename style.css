@@ -70,3 +70,117 @@ nav{display:flex;gap:34px}nav a{color:inherit;text-decoration:none;text-transfor
     margin-bottom:50px;
   }
 }
+
+/* OBJECTS — HOO. */
+
+.objects-page{
+  padding:150px 5vw 120px;
+}
+
+.objects-intro{
+  margin-bottom:90px;
+}
+
+.objects-intro h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(62px,9vw,150px);
+  font-weight:400;
+  line-height:.86;
+  letter-spacing:-.055em;
+  margin:18px 0 0;
+}
+
+.objects-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:28px;
+  row-gap:90px;
+}
+
+.object-item{
+  margin:0;
+}
+
+.object-item img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.object-item figcaption{
+  padding-top:15px;
+  border-top:1px solid var(--line);
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:20px;
+}
+
+.object-item h2{
+  margin:0;
+  font-size:12px;
+  font-weight:400;
+  letter-spacing:.14em;
+}
+
+.object-item p{
+  margin:0;
+  font-size:11px;
+  color:var(--muted);
+  text-align:right;
+}
+
+
+/* Bazı görselleri daha editoryal göstermek için */
+
+.object-item:nth-child(3),
+.object-item:nth-child(6),
+.object-item:nth-child(9){
+  grid-column:span 2;
+}
+
+.object-item:nth-child(3) img,
+.object-item:nth-child(6) img,
+.object-item:nth-child(9) img{
+  max-height:82vh;
+  object-fit:cover;
+}
+
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .objects-page{
+    padding:120px 24px 80px;
+  }
+
+  .objects-intro{
+    margin-bottom:55px;
+  }
+
+  .objects-intro h1{
+    font-size:clamp(54px,17vw,90px);
+  }
+
+  .objects-grid{
+    grid-template-columns:1fr;
+    row-gap:60px;
+  }
+
+  .object-item:nth-child(3),
+  .object-item:nth-child(6),
+  .object-item:nth-child(9){
+    grid-column:auto;
+  }
+
+  .object-item figcaption{
+    display:block;
+  }
+
+  .object-item p{
+    text-align:left;
+    margin-top:7px;
+  }
+}
