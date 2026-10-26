@@ -184,3 +184,31 @@ nav{display:flex;gap:34px}nav a{color:inherit;text-decoration:none;text-transfor
     margin-top:7px;
   }
 }
+/* OBJECTS DESKTOP SIZE FIX */
+
+@media (min-width: 761px){
+
+  .objects-page{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+  .objects-grid{
+    grid-template-columns:repeat(3, 1fr);
+    column-gap:24px;
+    row-gap:70px;
+  }
+
+  .object-item:nth-child(3),
+  .object-item:nth-child(6),
+  .object-item:nth-child(9){
+    grid-column:auto;
+  }
+
+  .object-item img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+  }
+
+}
